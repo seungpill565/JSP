@@ -21,6 +21,15 @@
 	<%} %>
 	<button type="submit" >º¸³»±â</button>
 	</form>
-
+	<%if(request.getParameter("big_money")!=null){ %>
+		<div><%=request.getParameter("big_money")%></div>
+	<% }%>
+	<%if(request.getParameter("small")!=null){ %>
+		<div><%=request.getParameter("small")%></div>
+	<% }%>
+	<%if(request.getParameter("youth")!=null){ %>
+		<div><%=request.getParameter("youth")%></div>
+	<% }%>
+	
 </body>
 </html>
