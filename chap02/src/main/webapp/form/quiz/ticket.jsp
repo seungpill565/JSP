@@ -21,14 +21,14 @@
 	<%} %>
 	<button type="submit" >º¸³»±â</button>
 	</form>
-	<%if(request.getParameter("big_money")!=null){ %>
-		<div><%=request.getParameter("big_money")%></div>
+	<%if(session.getAttribute("big")!=null){ %>
+		<div><%=session.getAttribute("big")%></div>
 	<% }%>
-	<%if(request.getParameter("small")!=null){ %>
-		<div><%=request.getParameter("small")%></div>
+	<%if(session.getAttribute("small")!=null){ %>
+		<div><%=session.getAttribute("small")%></div>
 	<% }%>
-	<%if(request.getParameter("youth")!=null){ %>
-		<div><%=request.getParameter("youth")%></div>
+	<%if(session.getAttribute("youth")!=null){ %>
+		<div><%=session.getAttribute("youth")%></div>
 	<% }%>
 	
 </body>
