@@ -14,6 +14,7 @@ public class Employee {
 	private Double commission_pct;
 	private String job_id;
 	private Integer department_id;
+	private String email;
 	
 	public Employee(ResultSet rs) throws SQLException{
 		employee_id 	= rs.getInt("employee_id");
@@ -24,7 +25,13 @@ public class Employee {
 		job_id 			=rs.getString("job_id");
 		commission_pct 	= rs.getDouble("commission_pct");
 		department_id 	= rs.getInt("department_id");
+		email			= rs.getString("email");
 				
+	}
+	
+	public Employee(Integer employee_id) {
+		this.employee_id = employee_id;
+	
 	}
 
 	public Integer getEmployee_id() {
@@ -89,6 +96,18 @@ public class Employee {
 
 	public void setDepartment_id(Integer department_id) {
 		this.department_id = department_id;
+	}
+	
+	public String getForm() {
+		return "abcdefg";
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	

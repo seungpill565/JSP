@@ -11,7 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import chap04.process.EmployeeAddFormProcess;
 import chap04.process.EmployeeAddProcess;
+import chap04.process.EmployeeDelFormProcess;
+import chap04.process.EmployeeDelProcess;
 import chap04.process.EmployeeListProcess;
+import chap04.process.EmployeeModify;
+import chap04.process.EmployeeModifyFormProcess;
 import chap04.process.Process;
 
 public class DispatcherServlet extends HttpServlet{
@@ -25,6 +29,11 @@ public class DispatcherServlet extends HttpServlet{
 		uri_mapping.put("/employee/list", new EmployeeListProcess());
 		uri_mapping.put("/employee/add_form", new EmployeeAddFormProcess());
 		uri_mapping.put("/employee/add", new EmployeeAddProcess());
+		uri_mapping.put("/employee/modify_form", new EmployeeModifyFormProcess());
+		uri_mapping.put("/employee/modify", new EmployeeModify());
+		uri_mapping.put("/employee/del", new EmployeeDelProcess());
+		uri_mapping.put("/employee/del_form",new EmployeeDelFormProcess());
+		
 		
 	}
 	

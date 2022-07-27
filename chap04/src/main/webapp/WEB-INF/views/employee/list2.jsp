@@ -15,9 +15,8 @@
 	<ul>
 		<c:forEach items="${employees }" var="employee">
 			<li>${employee.first_name } ${employee.last_name } 
-			(<a href="/chap04/employee/modify_form?employee_id=${employee.employee_id }&last_name=${employee.last_name}
-			&hire_date${employee.hire_date}&email=${employee.email}">수정</a> 
-			<a href="/chap04/employee/del_form?employee_id=${employee.employee_id }">삭제</a>)</li>
+			(<a href="/chap04/employee/modify_form?emp=${employee.employee_id }">수정</a> /
+			<a href="/chap04/employee/del_form?emp=${employee.employee_id }">삭제</a>)</li>
 		</c:forEach>
 	</ul>
 
